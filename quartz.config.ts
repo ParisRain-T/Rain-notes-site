@@ -8,16 +8,26 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "Quartz 4",
+    pageTitle: "ParisRain",
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
     analytics: {
       provider: "plausible",
     },
-    locale: "en-US",
+    locale: "zh-CN",
     baseUrl: "notes.20041019.xyz",
-    ignorePatterns: ["private", "templates", ".obsidian"],
+    // Glob patterns to not search in the `content/` vault
+    ignorePatterns: [
+      "private",
+      "private/**",
+      "templates",
+      "templates/**",
+      ".obsidian",
+      ".obsidian/**",
+      "_meta",
+      "_meta/**",
+    ],
     defaultDateType: "modified",
     theme: {
       fontOrigin: "googleFonts",

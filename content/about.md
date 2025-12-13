@@ -2,8 +2,6 @@
 title: 关于我
 ---
 
-# 关于我
-
 这里放一份「对外版本」的自我介绍：足够清晰，但不过度冗长。你可以先保留结构，慢慢补齐内容。
 
 ## 一句话简介
@@ -31,4 +29,3 @@ title: 关于我
 
 - Email：`yourname@example.com`
 - GitHub：`https://github.com/yourname`
-

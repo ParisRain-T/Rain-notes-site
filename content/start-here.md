@@ -2,8 +2,6 @@
 title: 从这里开始
 ---
 
-# 从这里开始
-
 如果你是第一次来（或你是面试官/合作方），建议从这页快速了解本站的内容结构与我在做什么。
 
 ## 3 分钟了解我
@@ -30,4 +28,3 @@ title: 从这里开始
 
 - Email：`yourname@example.com`
 - GitHub：`https://github.com/yourname`
-

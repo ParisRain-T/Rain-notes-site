@@ -14,6 +14,22 @@ export const sharedPageComponents: SharedLayout = {
   }),
 }
 
+const profileCard = Component.DesktopOnly(
+  Component.ProfileCard({
+    name: "ParisRain",
+    role: "构建 · 学习 · 写作",
+    bio: "这里收录我的公开笔记、项目与复盘。",
+    avatarUrl: "static/avatar.svg",
+    links: [{ href: "index.xml", label: "RSS", icon: "rss" }],
+    sections: [
+      {
+        title: "关注方向",
+        items: ["后端工程", "工具/效率", "职业成长"],
+      },
+    ],
+  }),
+)
+
 // components for pages that display a single page (e.g. a single note)
 export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
@@ -26,7 +42,8 @@ export const defaultContentPageLayout: PageLayout = {
     Component.TagList(),
   ],
   left: [
-    Component.PageTitle(),
+    Component.MobileOnly(Component.PageTitle()),
+    profileCard,
     Component.MobileOnly(Component.Spacer()),
     Component.Flex({
       components: [
@@ -51,7 +68,8 @@ export const defaultContentPageLayout: PageLayout = {
 export const defaultListPageLayout: PageLayout = {
   beforeBody: [Component.Breadcrumbs(), Component.ArticleTitle(), Component.ContentMeta()],
   left: [
-    Component.PageTitle(),
+    Component.MobileOnly(Component.PageTitle()),
+    profileCard,
     Component.MobileOnly(Component.Spacer()),
     Component.Flex({
       components: [

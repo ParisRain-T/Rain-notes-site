@@ -2,6 +2,8 @@
 title: Takeout Mini Program
 ---
 
+# Takeout Mini Program
+
 > 示例项目页：把下面的占位符改成你的真实项目内容即可。
 
 ## 概览
@@ -29,3 +31,4 @@ title: Takeout Mini Program
 - 最难的点：`...`
 - 解决方案：`...`
 - 收获：`...`
+

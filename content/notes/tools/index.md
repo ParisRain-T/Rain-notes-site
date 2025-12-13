@@ -1,5 +1,6 @@
 ---
 title: 工具
+publish: true
 ---
 
 # 工具
@@ -12,4 +13,3 @@ title: 工具
 - `Shell：常用命令与脚本`
 - `DevOps：CI/CD 与发布`
 - `效率：笔记与知识管理`
-

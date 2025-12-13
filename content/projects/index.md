@@ -1,5 +1,6 @@
 ---
 title: Projects
+publish: true
 ---
 
 # Projects
@@ -10,4 +11,3 @@ title: Projects
 
 - [[projects/edgegarden/index|EdgeGarden]]：项目总览（示例项目页，可替换成真实内容）
 - [[projects/takeout-miniprogram/index|Takeout Mini Program]]：项目总览（示例项目页，可替换成真实内容）
-

@@ -1,5 +1,6 @@
 ---
 title: EdgeGarden
+publish: true
 ---
 
 # EdgeGarden
@@ -40,4 +41,3 @@ title: EdgeGarden
 - 做对了什么：`...`
 - 做错了什么：`...`
 - 下次怎么做：`...`
-

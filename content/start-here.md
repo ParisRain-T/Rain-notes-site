@@ -1,5 +1,6 @@
 ---
 title: 从这里开始
+publish: true
 ---
 
 # 从这里开始
@@ -30,4 +31,3 @@ title: 从这里开始
 
 - Email：`yourname@example.com`
 - GitHub：`https://github.com/yourname`
-

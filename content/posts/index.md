@@ -1,5 +1,6 @@
 ---
 title: Posts
+publish: true
 ---
 
 # Posts
@@ -14,5 +15,4 @@ title: Posts
 
 ## 模板
 
-- [[posts/2025-12-xx-xxx|文章模板（draft）]]
-
+- Obsidian 模板（不发布）：`_meta/templates/post-template.md`

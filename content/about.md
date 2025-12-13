@@ -1,5 +1,6 @@
 ---
 title: 关于我
+publish: true
 ---
 
 # 关于我
@@ -31,4 +32,3 @@ title: 关于我
 
 - Email：`yourname@example.com`
 - GitHub：`https://github.com/yourname`
-

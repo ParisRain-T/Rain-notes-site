@@ -1,9 +1,13 @@
 ---
-title: 模板：笔记
-draft: true
+title: ""
+publish: true
+date: 2025-12-13
+tags:
+  - topic/xxx
+  - stage/seedling
 ---
 
-# 模板：笔记
+# 笔记标题
 
 ## 一句话结论
 

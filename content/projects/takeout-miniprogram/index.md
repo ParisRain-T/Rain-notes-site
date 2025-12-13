@@ -1,5 +1,6 @@
 ---
 title: Takeout Mini Program
+publish: true
 ---
 
 # Takeout Mini Program
@@ -31,4 +32,3 @@ title: Takeout Mini Program
 - 最难的点：`...`
 - 解决方案：`...`
 - 收获：`...`
-

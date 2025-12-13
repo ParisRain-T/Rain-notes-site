@@ -16,17 +16,17 @@ const config: QuartzConfig = {
       provider: "plausible",
     },
     locale: "zh-CN",
+    // NOTE: Used for sitemap/RSS and must be domain only (no https://, no trailing slash)
     baseUrl: "notes.20041019.xyz",
     // Glob patterns to not search in the `content/` vault
     ignorePatterns: [
-      "private",
-      "private/**",
-      "templates",
-      "templates/**",
-      ".obsidian",
       ".obsidian/**",
-      "_meta",
       "_meta/**",
+      "private/**",
+      "templates/**",
+      "assets/private/**",
+      "**/.DS_Store",
+      "**/Thumbs.db",
     ],
     defaultDateType: "modified",
     theme: {
@@ -83,7 +83,8 @@ const config: QuartzConfig = {
       Plugin.Description(),
       Plugin.Latex({ renderEngine: "katex" }),
     ],
-    filters: [Plugin.RemoveDrafts()],
+    // Only publish notes that explicitly opt-in with `publish: true`
+    filters: [Plugin.ExplicitPublish(), Plugin.RemoveDrafts()],
     emitters: [
       Plugin.AliasRedirects(),
       Plugin.ComponentResources(),

@@ -25,16 +25,6 @@ const profileCard = Component.DesktopOnly(
       { href: "https://github.com/ParisRain-T", label: "GitHub", icon: "github" },
       { href: "mailto:2026482602th@gmail.com", label: "Email", icon: "mail" },
     ],
-    sections: [
-      {
-        title: "正在学习",
-        items: ["C 语言", "ESP32", "MQTT 协议"],
-      },
-      {
-        title: "目标方向",
-        items: ["嵌入式开发", "边缘计算", "云平台对接"],
-      },
-    ],
   }),
 )
 

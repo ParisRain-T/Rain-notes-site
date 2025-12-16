@@ -55,11 +55,10 @@ export const defaultContentPageLayout: PageLayout = {
     }),
     Component.QuickNav({
       links: [
-        { href: "/start-here", label: "🚀 Start Here" },
-        { href: "/projects", label: "💼 Projects" },
-        { href: "/notes", label: "📝 Notes" },
-        { href: "/posts", label: "📚 Posts" },
-        { href: "/til", label: "💡 TIL" },
+        { href: "/start-here", label: "Start" },
+        { href: "/projects", label: "Projects" },
+        { href: "/notes", label: "Notes" },
+        { href: "/til", label: "TIL" },
       ],
     }),
     Component.Explorer({
@@ -104,11 +103,10 @@ export const defaultListPageLayout: PageLayout = {
     }),
     Component.QuickNav({
       links: [
-        { href: "/start-here", label: "🚀 Start Here" },
-        { href: "/projects", label: "💼 Projects" },
-        { href: "/notes", label: "📝 Notes" },
-        { href: "/posts", label: "📚 Posts" },
-        { href: "/til", label: "💡 TIL" },
+        { href: "/start-here", label: "Start" },
+        { href: "/projects", label: "Projects" },
+        { href: "/notes", label: "Notes" },
+        { href: "/til", label: "TIL" },
       ],
     }),
     Component.Explorer({

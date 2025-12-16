@@ -88,13 +88,6 @@ function Icon({ icon }: { icon: ProfileLinkIcon }) {
   }
 }
 
-function initials(name: string) {
-  const parts = name.trim().split(/\s+/).filter(Boolean)
-  if (parts.length === 0) return "PR"
-  if (parts.length === 1) return parts[0].slice(0, 2).toUpperCase()
-  return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase()
-}
-
 export default ((opts: Options) => {
   const ProfileCard: QuartzComponent = ({ fileData, displayClass }: QuartzComponentProps) => {
     const baseDir = pathToRoot(fileData.slug!)
@@ -105,26 +98,18 @@ export default ((opts: Options) => {
       : joinSegments(baseDir, "static/icon.png")
 
     return (
-      <aside class={classNames(displayClass, "profile-card")} aria-label="Profile">
-        <a class="profile-card__avatar" href={baseDir} aria-label="Home">
-          <span class="profile-card__avatarFrame">
-            <span class="profile-card__avatarFallback" aria-hidden="true">
-              {initials(opts.name)}
-            </span>
+      <div class={classNames(displayClass, "profile-card")}>
+        <div class="profile-card__header">
+          <a class="profile-card__avatar" href={baseDir}>
             <img src={avatarSrc} alt={opts.avatarAlt ?? ""} loading="lazy" />
-          </span>
-        </a>
-
-        <div class="profile-card__identity">
-          <a class="profile-card__name" href={baseDir}>
-            {opts.name}
           </a>
-          {opts.role ? <div class="profile-card__role">{opts.role}</div> : null}
-          {opts.org ? <div class="profile-card__org">{opts.org}</div> : null}
-          {opts.location ? <div class="profile-card__location">{opts.location}</div> : null}
+          <div class="profile-card__identity">
+            <a class="profile-card__name" href={baseDir}>
+              {opts.name}
+            </a>
+            {opts.role ? <span class="profile-card__role">{opts.role}</span> : null}
+          </div>
         </div>
-
-        {opts.bio ? <p class="profile-card__bio">{opts.bio}</p> : null}
 
         {opts.links && opts.links.length > 0 ? (
           <nav class="profile-card__links" aria-label="Links">
@@ -133,28 +118,14 @@ export default ((opts: Options) => {
                 class="profile-card__link"
                 href={isAbsoluteURL(link.href) ? link.href : joinSegments(baseDir, link.href)}
                 aria-label={link.label}
+                title={link.label}
               >
                 <Icon icon={link.icon ?? "link"} />
               </a>
             ))}
           </nav>
         ) : null}
-
-        {opts.sections && opts.sections.length > 0 ? (
-          <div class="profile-card__sections">
-            {opts.sections.map((section) => (
-              <section class="profile-card__section">
-                <h3 class="profile-card__sectionTitle">{section.title}</h3>
-                <ul class="profile-card__sectionList">
-                  {section.items.map((item) => (
-                    <li>{item}</li>
-                  ))}
-                </ul>
-              </section>
-            ))}
-          </div>
-        ) : null}
-      </aside>
+      </div>
     )
   }
 

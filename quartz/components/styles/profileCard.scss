@@ -1,97 +1,107 @@
 @use "../../styles/variables.scss" as *;
 
+// Minimal & Elegant Profile Card
 .profile-card {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
   width: 100%;
-  padding: 0.3rem 0;
-  gap: 0.6rem;
+  padding: 0;
+  gap: 0.75rem;
+  border-bottom: 1px solid var(--lightgray);
+  padding-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .profile-card__header {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  flex: 1;
-  min-width: 0;
+  gap: 0.75rem;
+  width: 100%;
 }
 
 .profile-card__avatar {
   flex-shrink: 0;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
   overflow: hidden;
+  background: var(--lightgray);
 
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     margin: 0;
+    display: block;
   }
 }
 
 .profile-card__identity {
   display: flex;
   flex-direction: column;
-  gap: 0;
+  gap: 0.15rem;
   overflow: hidden;
+  flex: 1;
 }
 
 .profile-card__name {
   font-family: var(--headerFont);
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-weight: 600;
   color: var(--dark);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   line-height: 1.3;
+  letter-spacing: -0.01em;
+
+  &:hover {
+    color: var(--secondary);
+  }
 }
 
 .profile-card__role {
-  font-size: 0.75rem;
-  color: var(--darkgray);
+  font-size: 0.8rem;
+  color: var(--gray);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  opacity: 0.7;
+  font-weight: 400;
 }
 
 .profile-card__links {
   display: flex;
-  gap: 0.2rem;
-  flex-shrink: 0;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
 }
 
 .profile-card__link {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.75rem;
+  height: 1.75rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 4px;
-  color: var(--darkgray);
-  transition: color 0.2s ease;
+  border-radius: 6px;
+  color: var(--gray);
+  background: var(--lightgray);
+  transition: all 0.2s ease;
 
   &:hover {
-    color: var(--tertiary);
+    color: var(--dark);
+    background: color-mix(in srgb, var(--lightgray) 80%, var(--secondary) 20%);
   }
 
   svg {
-    width: 0.85rem;
-    height: 0.85rem;
+    width: 0.9rem;
+    height: 0.9rem;
   }
 }
 
 @media all and ($mobile) {
   .profile-card {
-    justify-content: flex-start;
-  }
-
-  .profile-card__links {
-    margin-left: auto;
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
   }
 }

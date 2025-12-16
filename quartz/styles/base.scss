@@ -230,10 +230,10 @@ a {
     }
 
     & .sidebar {
-      gap: 0.5rem;
+      gap: 1rem;
       top: 0;
       box-sizing: border-box;
-      padding: 1rem 0.5rem;
+      padding: 1.5rem 1rem 1rem 1rem;
       display: flex;
       height: 100vh;
       position: sticky;
@@ -244,7 +244,7 @@ a {
       grid-area: grid-sidebar-left;
       flex-direction: column;
       overflow-y: auto;
-      align-items: center;
+      align-items: stretch;
 
       @media all and ($mobile) {
         gap: 0;

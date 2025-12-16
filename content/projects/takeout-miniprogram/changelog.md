@@ -3,7 +3,6 @@ title: 外卖小程序更新日志
 publish: true
 ---
 
-# 外卖小程序 Changelog
 
 > 项目的版本历史和重要更新
 

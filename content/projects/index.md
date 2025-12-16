@@ -3,21 +3,10 @@ title: Projects
 publish: true
 ---
 
-# Projects
 
 这里汇总我做过的项目。每个项目都包含完整的文档体系，方便面试官和读者深入了解。
 
 ## 项目列表
-
-### 🌱 EdgeGarden - IoT 智慧花园
-
-> 完整的端到云 IoT 项目
-
-- [[projects/edgegarden/index|项目总览]]
-- [[projects/edgegarden/architecture|系统架构]]
-- [[projects/edgegarden/how-to-run|运行指南]]
-- [[projects/edgegarden/decisions|技术决策]]
-- [[projects/edgegarden/changelog|更新日志]]
 
 ### 🍜 外卖小程序
 
@@ -28,6 +17,26 @@ publish: true
 - [[projects/takeout-miniprogram/how-to-run|运行指南]]
 - [[projects/takeout-miniprogram/decisions|技术决策]]
 - [[projects/takeout-miniprogram/changelog|更新日志]]
+
+### 🚗 智能小车
+
+> 嵌入式控制 + 传感器融合
+
+- [[projects/smart-car/index|项目总览]]
+- [[projects/smart-car/architecture|系统架构]]
+- [[projects/smart-car/how-to-run|运行指南]]
+- [[projects/smart-car/decisions|技术决策]]
+- [[projects/smart-car/changelog|更新日志]]
+
+### 🦾 桌面机械臂
+
+> 运动控制 + 逆运动学
+
+- [[projects/desktop-arm/index|项目总览]]
+- [[projects/desktop-arm/architecture|系统架构]]
+- [[projects/desktop-arm/how-to-run|运行指南]]
+- [[projects/desktop-arm/decisions|技术决策]]
+- [[projects/desktop-arm/changelog|更新日志]]
 
 ---
 

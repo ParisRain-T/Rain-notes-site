@@ -1,22 +1,20 @@
 ---
-title: ""
-publish: true
-date: 2025-12-13
-tags:
-  - topic/xxx
-  - stage/seedling
+title: 笔记标题
+date: 2025-01-01
+tags: []
+aliases: []
+draft: false
 ---
 
-# 笔记标题
+## 概念
 
-## 一句话结论
+...
 
-- `...`
+## 要点
 
-## 关键点
+1. 
+2. 
 
-- `...`
+## 关联
 
-## 参考
-
-- `...`
+- [[相关笔记]]

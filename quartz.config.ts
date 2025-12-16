@@ -50,15 +50,15 @@ const config: QuartzConfig = {
           textHighlight: "#fff23688",
         },
         darkMode: {
-          light: "#0a0a0c", // Deep cosmic dark
-          lightgray: "#393639",
-          gray: "#646464",
-          darkgray: "#d4d4d4",
-          dark: "#ebebec",
-          secondary: "#00f0ff", // Neon Cyan
-          tertiary: "#ff00ff",  // Neon Magenta
-          highlight: "rgba(143, 159, 169, 0.15)",
-          textHighlight: "#b3aa0288",
+          light: "#0b0c10", // Deeper, neutral void black
+          lightgray: "#1f2833", // Subtle blue-grey for borders
+          gray: "#66fcf1", // Bright Cyan-Blue for subtle accents/graph links
+          darkgray: "#c5c6c7", // Soft white-grey for body text (high readability)
+          dark: "#ffffff", // Pure white for headers
+          secondary: "#45a29e", // Muted Teal for links (calm but distinct)
+          tertiary: "#66fcf1", // Electric Cyan for hover/active states
+          highlight: "rgba(69, 162, 158, 0.15)", // Teal tint for highlights
+          textHighlight: "#45a29e88",
         },
       },
     },

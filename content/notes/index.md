@@ -9,6 +9,7 @@ publish: true
 
 ## 分类入口
 
+- [[notes/iot/index|🎯 IoT 物联网]] ← 核心方向
 - [[notes/embedded/index|嵌入式]]
 - [[notes/backend/index|后端]]
 - [[notes/tools/index|工具]]

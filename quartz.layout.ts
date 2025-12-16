@@ -20,12 +20,8 @@ const profileCard = Component.DesktopOnly(
     role: "构建 · 学习 · 写作",
     bio: "这里收录我的公开笔记、项目与复盘。",
     avatarUrl: "static/avatar.svg",
-    links: [{ href: "index.xml", label: "RSS", icon: "rss" }],
-    sections: [
-      {
-        title: "关注方向",
-        items: ["后端工程", "工具/效率", "职业成长"],
-      },
+    links: [
+      { href: "https://github.com/ParisRain-T", label: "GitHub", icon: "github" },
     ],
   }),
 )

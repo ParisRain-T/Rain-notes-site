@@ -20,7 +20,7 @@ const profileCard = Component.DesktopOnly(
     role: "IoT 物联网方向",
     org: "物联网工程 · 大二",
     bio: "用代码连接物理世界 🌱",
-    avatarUrl: "static/avatar.svg",
+    avatarUrl: "static/avatar.jpeg",
     links: [
       { href: "https://github.com/ParisRain-T", label: "GitHub", icon: "github" },
       { href: "mailto:2026482602th@gmail.com", label: "Email", icon: "mail" },

@@ -36,8 +36,9 @@ export default ((userOpts?: Partial<Options>) => {
 
     QuickNav.css = `
 .quick-nav {
-  margin-bottom: 0.5rem;
-  padding: 0 0.5rem;
+  margin-bottom: 0.3rem;
+  padding: 0;
+  width: 100%;
 }
 
 .quick-nav ul {
@@ -46,7 +47,7 @@ export default ((userOpts?: Partial<Options>) => {
   margin: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.3rem;
+  gap: 0.25rem;
   justify-content: center;
 }
 

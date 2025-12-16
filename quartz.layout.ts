@@ -53,14 +53,6 @@ export const defaultContentPageLayout: PageLayout = {
         { Component: Component.ReaderMode() },
       ],
     }),
-    Component.QuickNav({
-      links: [
-        { href: "/start-here", label: "Start" },
-        { href: "/projects", label: "Projects" },
-        { href: "/notes", label: "Notes" },
-        { href: "/til", label: "TIL" },
-      ],
-    }),
     Component.Explorer({
       filterFn: (node) => !["_meta", "tags", "assets"].includes(node.slugSegment),
       sortFn: (a, b) => {
@@ -99,14 +91,6 @@ export const defaultListPageLayout: PageLayout = {
         },
         { Component: Component.Darkmode() },
         { Component: Component.ReaderMode() },
-      ],
-    }),
-    Component.QuickNav({
-      links: [
-        { href: "/start-here", label: "Start" },
-        { href: "/projects", label: "Projects" },
-        { href: "/notes", label: "Notes" },
-        { href: "/til", label: "TIL" },
       ],
     }),
     Component.Explorer({

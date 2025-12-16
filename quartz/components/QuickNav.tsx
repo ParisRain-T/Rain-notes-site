@@ -36,7 +36,8 @@ export default ((userOpts?: Partial<Options>) => {
 
     QuickNav.css = `
 .quick-nav {
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
+  padding: 0 0.5rem;
 }
 
 .quick-nav ul {
@@ -44,23 +45,25 @@ export default ((userOpts?: Partial<Options>) => {
   padding: 0;
   margin: 0;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 0.3rem;
+  justify-content: center;
 }
 
 .quick-nav li a {
   display: block;
-  padding: 0.5rem 0.8rem;
-  border-radius: 8px;
+  padding: 0.3rem 0.5rem;
+  border-radius: 6px;
   color: var(--dark);
   font-weight: 500;
-  font-size: 0.95rem;
+  font-size: 0.8rem;
+  background: var(--lightgray);
   transition: background-color 0.15s ease, color 0.15s ease;
 }
 
 .quick-nav li a:hover {
-  background-color: var(--lightgray);
-  color: var(--tertiary);
+  background-color: var(--secondary);
+  color: var(--light);
 }
 `
 

@@ -84,7 +84,7 @@ const config: QuartzConfig = {
       Plugin.Latex({ renderEngine: "katex" }),
     ],
     // Only publish notes that explicitly opt-in with `publish: true`
-    filters: [Plugin.ExplicitPublish(), Plugin.RemoveDrafts()],
+    filters: [Plugin.RemoveDrafts()],
     emitters: [
       Plugin.AliasRedirects(),
       Plugin.ComponentResources(),

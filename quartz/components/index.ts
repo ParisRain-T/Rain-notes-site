@@ -25,6 +25,7 @@ import Flex from "./Flex"
 import ConditionalRender from "./ConditionalRender"
 import ProfileCard from "./ProfileCard"
 import LuminousHero from "./LuminousHero"
+import InteractiveEffects from "./InteractiveEffects"
 
 export {
   ArticleTitle,
@@ -54,4 +55,5 @@ export {
   ConditionalRender,
   ProfileCard,
   LuminousHero,
+  InteractiveEffects,
 }

@@ -31,6 +31,7 @@ const profileCard = Component.DesktopOnly(
 // components for pages that display a single page (e.g. a single note)
 export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
+    Component.InteractiveEffects(),
     Component.LuminousHero(),
     Component.ConditionalRender({
       component: Component.Breadcrumbs(),

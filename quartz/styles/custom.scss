@@ -172,3 +172,295 @@ pre {
         -webkit-text-fill-color: transparent;
     }
 }
+
+// 9. Interactive Effects (Phase 1)
+.reveal-hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+// Ensure 3D context for tilt
+.section-li>.section,
+.profile-card,
+.luminous-hero {
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    will-change: transform;
+    transition: transform 0.1s ease-out;
+    /* Smooth movement */
+}
+
+// 11. Phase 3: Exquisite Details
+
+// Mac-style Code Blocks
+pre {
+    background: var(--lightgray) !important; // Adapt to theme (Light mode = light gray)
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03); // Softer shadow
+    border-radius: 12px !important;
+    position: relative;
+    padding-top: 2.5rem !important; // Space for buttons
+    color: var(--dark) !important; // Ensure text contrast
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: #ff5f56; // Red
+        box-shadow: 20px 0 0 #ffbd2e, 40px 0 0 #27c93f; // Yellow & Green
+        opacity: 0.8; // Slightly subtle
+    }
+}
+
+:root[saved-theme="dark"] pre {
+    background: #1e1e1e !important; // Deep dark for Night mode
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    color: #e0e0e0 !important;
+}
+
+// Liquid Underline for Links
+.content p a,
+.content ul a,
+.content ol a {
+    text-decoration: none !important;
+    background-image: linear-gradient(120deg, rgba(var(--secondary-rgb), 0.2) 0%, rgba(var(--secondary-rgb), 0.2) 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0.2em;
+    background-position: 0 88%;
+    transition: background-size 0.25s ease-in;
+    color: var(--dark) !important;
+    font-weight: 500;
+    padding: 0 2px;
+    border-radius: 2px;
+
+    &:hover {
+        background-size: 100% 100%; // Fill up
+        color: var(--tertiary) !important;
+    }
+}
+
+// Typography Polish
+.content>p:first-of-type::first-letter {
+    font-size: 3.5em;
+    float: left;
+    margin-right: 0.1em;
+    line-height: 0.8;
+    background: linear-gradient(135deg, var(--secondary), var(--tertiary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: var(--headerFont);
+    font-weight: 800;
+}
+
+// 12. Cosmic 404: "The Monolith" (High-Contrast Artifact)
+.not-found-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+    text-align: center;
+    padding: 2rem;
+
+    // The Monolith Card
+    // Forces a dark environment for the glitch to pop, regardless of Light/Dark mode
+    background: #0a0a0c;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    box-shadow:
+        0 20px 60px -10px rgba(0, 0, 0, 0.5),
+        0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+    margin: 4rem auto;
+    max-width: 800px;
+    position: relative;
+    overflow: hidden;
+
+    // Scanline Overlay (Inside Card)
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%);
+        background-size: 100% 4px;
+        pointer-events: none;
+        z-index: 2;
+        opacity: 0.6;
+    }
+
+    // Vignette
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(circle at center, transparent 40%, #000 100%);
+        opacity: 0.8;
+        pointer-events: none;
+        z-index: 1;
+    }
+
+    .glitch-wrapper {
+        margin: 2rem 0;
+        position: relative;
+        z-index: 5; // Above overlay
+    }
+
+    .glitch {
+        font-size: 9rem;
+        font-weight: 900;
+        line-height: 0.9;
+        position: relative;
+        color: #fff; // Always white because bg is always dark
+        letter-spacing: -0.05em;
+        text-transform: uppercase;
+
+        @media (max-width: 600px) {
+            font-size: 5rem;
+        }
+
+        &::before,
+        &::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        // Violent RGB Shift
+        &::before {
+            color: #0ff;
+            z-index: -1;
+            clip-path: inset(0 0 0 0); // Reset default
+            animation: glitch-violent-1 2.5s infinite linear alternate-reverse;
+        }
+
+        &::after {
+            color: #f0f;
+            z-index: -2;
+            clip-path: inset(0 0 0 0);
+            animation: glitch-violent-2 2.5s infinite linear alternate-reverse;
+        }
+    }
+
+    .not-found-text {
+        font-size: 1.5rem;
+        color: var(--secondary);
+        font-family: var(--codeFont);
+        margin-bottom: 0.5rem;
+        letter-spacing: 0.2rem;
+        text-transform: uppercase;
+        position: relative;
+        z-index: 5;
+        text-shadow: 0 0 10px rgba(var(--secondary-rgb), 0.5);
+    }
+
+    .not-found-subtext {
+        font-size: 1.1rem;
+        color: #888; // Static gray color
+        margin-bottom: 3rem;
+        font-family: var(--bodyFont);
+        max-width: 450px;
+        line-height: 1.6;
+        z-index: 5;
+        position: relative;
+    }
+
+    .warp-btn {
+        position: relative;
+        z-index: 5;
+        padding: 1rem 2.5rem;
+        background: transparent;
+        color: var(--secondary) !important;
+        border: 1px solid var(--secondary);
+        font-family: var(--codeFont);
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-decoration: none !important;
+        transition: all 0.2s ease;
+
+        &:hover {
+            background: var(--secondary);
+            color: #000 !important;
+            box-shadow: 0 0 30px var(--secondary);
+        }
+    }
+}
+
+// Violent Glitch Keyframes (More aggressive and obvious)
+@keyframes glitch-violent-1 {
+    0% {
+        transform: translate(0);
+        clip-path: inset(0 0 0 0);
+    }
+
+    20% {
+        transform: translate(-3px, 3px);
+        clip-path: inset(40% 0 10% 0);
+    }
+
+    40% {
+        transform: translate(3px, -3px);
+        clip-path: inset(10% 0 60% 0);
+    }
+
+    60% {
+        transform: translate(-3px, 0);
+        clip-path: inset(80% 0 5% 0);
+    }
+
+    80% {
+        transform: translate(3px, 3px);
+        clip-path: inset(5% 0 40% 0);
+    }
+
+    100% {
+        transform: translate(0);
+        clip-path: inset(60% 0 20% 0);
+    }
+}
+
+@keyframes glitch-violent-2 {
+    0% {
+        transform: translate(0);
+        clip-path: inset(0 0 0 0);
+    }
+
+    20% {
+        transform: translate(3px, -3px);
+        clip-path: inset(10% 0 40% 0);
+    }
+
+    40% {
+        transform: translate(-3px, 3px);
+        clip-path: inset(60% 0 10% 0);
+    }
+
+    60% {
+        transform: translate(3px, 0);
+        clip-path: inset(5% 0 80% 0);
+    }
+
+    80% {
+        transform: translate(-3px, -3px);
+        clip-path: inset(40% 0 5% 0);
+    }
+
+    100% {
+        transform: translate(0);
+        clip-path: inset(20% 0 60% 0);
+    }
+}

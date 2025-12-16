@@ -17,11 +17,23 @@ export const sharedPageComponents: SharedLayout = {
 const profileCard = Component.DesktopOnly(
   Component.ProfileCard({
     name: "ParisRain",
-    role: "构建 · 学习 · 写作",
-    bio: "这里收录我的公开笔记、项目与复盘。",
+    role: "IoT 物联网方向",
+    org: "物联网工程 · 大二",
+    bio: "用代码连接物理世界 🌱",
     avatarUrl: "static/avatar.svg",
     links: [
       { href: "https://github.com/ParisRain-T", label: "GitHub", icon: "github" },
+      { href: "mailto:2026482602th@gmail.com", label: "Email", icon: "mail" },
+    ],
+    sections: [
+      {
+        title: "正在学习",
+        items: ["C 语言", "ESP32", "MQTT 协议"],
+      },
+      {
+        title: "目标方向",
+        items: ["嵌入式开发", "边缘计算", "云平台对接"],
+      },
     ],
   }),
 )
@@ -51,7 +63,30 @@ export const defaultContentPageLayout: PageLayout = {
         { Component: Component.ReaderMode() },
       ],
     }),
-    Component.Explorer(),
+    Component.QuickNav({
+      links: [
+        { href: "/start-here", label: "🚀 Start Here" },
+        { href: "/projects", label: "💼 Projects" },
+        { href: "/notes", label: "📝 Notes" },
+        { href: "/posts", label: "📚 Posts" },
+        { href: "/til", label: "💡 TIL" },
+      ],
+    }),
+    Component.Explorer({
+      filterFn: (node) => !["_meta", "tags", "assets"].includes(node.slugSegment),
+      sortFn: (a, b) => {
+        const order = ["projects", "notes", "posts", "til"]
+        const aIdx = order.indexOf(a.slugSegment)
+        const bIdx = order.indexOf(b.slugSegment)
+        if (aIdx !== -1 && bIdx !== -1) return aIdx - bIdx
+        if (aIdx !== -1) return -1
+        if (bIdx !== -1) return 1
+        if ((!a.isFolder && !b.isFolder) || (a.isFolder && b.isFolder)) {
+          return a.displayName.localeCompare(b.displayName, undefined, { numeric: true, sensitivity: "base" })
+        }
+        return !a.isFolder && b.isFolder ? 1 : -1
+      },
+    }),
   ],
   right: [
     Component.Graph(),
@@ -77,7 +112,30 @@ export const defaultListPageLayout: PageLayout = {
         { Component: Component.ReaderMode() },
       ],
     }),
-    Component.Explorer(),
+    Component.QuickNav({
+      links: [
+        { href: "/start-here", label: "🚀 Start Here" },
+        { href: "/projects", label: "💼 Projects" },
+        { href: "/notes", label: "📝 Notes" },
+        { href: "/posts", label: "📚 Posts" },
+        { href: "/til", label: "💡 TIL" },
+      ],
+    }),
+    Component.Explorer({
+      filterFn: (node) => !["_meta", "tags", "assets"].includes(node.slugSegment),
+      sortFn: (a, b) => {
+        const order = ["projects", "notes", "posts", "til"]
+        const aIdx = order.indexOf(a.slugSegment)
+        const bIdx = order.indexOf(b.slugSegment)
+        if (aIdx !== -1 && bIdx !== -1) return aIdx - bIdx
+        if (aIdx !== -1) return -1
+        if (bIdx !== -1) return 1
+        if ((!a.isFolder && !b.isFolder) || (a.isFolder && b.isFolder)) {
+          return a.displayName.localeCompare(b.displayName, undefined, { numeric: true, sensitivity: "base" })
+        }
+        return !a.isFolder && b.isFolder ? 1 : -1
+      },
+    }),
   ],
   right: [],
 }

@@ -44,6 +44,7 @@ export const defaultContentPageLayout: PageLayout = {
     profileCard,
     Component.MobileOnly(Component.Spacer()),
     Component.Flex({
+      gap: "1.25rem", // Spacious native spacing
       components: [
         {
           Component: Component.Search(),

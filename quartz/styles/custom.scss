@@ -1,70 +1,173 @@
 @use "./base.scss";
 
-// === Minimal Theme Polish ===
+// === ✨ Luminous Minimal Theme Engine ===
 
-// Refined search bar
+// 1. Fluid Animations & Transitions
+@keyframes fadeInSlide {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.page {
+    animation: fadeInSlide 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+// 2. Glassmorphism Sidebar
+.sidebar {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-right: 1px solid rgba(0, 0, 0, 0.04);
+
+    // Refined Scrollbar
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.1);
+        border-radius: 20px;
+
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+    }
+}
+
+// 3. Premium Typography & Readability
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.7; // Relaxed reading experience
+    letter-spacing: 0.01em;
+}
+
+h1,
+h2,
+h3 {
+    letter-spacing: -0.025em; // Tight, modern headers
+}
+
+// 4. Exquisite Search Bar
 .search {
+    margin-bottom: 1.5rem; // More breathing room
+
     &>button {
-        background: var(--lightgray) !important;
-        border: none !important;
-        border-radius: 8px !important;
+        background: rgba(0, 0, 0, 0.03) !important;
+        border: 1px solid rgba(0, 0, 0, 0.05) !important;
+        border-radius: 12px !important;
+        backdrop-filter: blur(10px);
+        transition: all 0.3s ease !important;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
 
         &:hover {
-            background: color-mix(in srgb, var(--lightgray) 85%, var(--secondary) 15%) !important;
+            background: rgba(0, 0, 0, 0.06) !important;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        // Icon style
+        p {
+            color: var(--gray);
+            font-weight: 500;
+        }
+
+        svg {
+            opacity: 0.6;
         }
     }
 }
 
-// Minimal toolbar icons
-.darkmode,
-.reader-mode {
+// 5. Spacious & Native Toolbar (Search/Dark/Reader)
+// Relax the flex container in quartz.layout.ts via these component styles
+.darkmode button,
+.reader-mode button {
+    background: transparent;
+    border-radius: 8px;
+    padding: 8px;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 
-    &>button,
-    &>svg {
-        opacity: 0.6;
-        transition: opacity 0.2s ease;
+    &:hover {
+        background: rgba(0, 0, 0, 0.05);
+        transform: rotate(15deg);
+    }
 
-        &:hover {
-            opacity: 1;
-        }
+    svg {
+        width: 20px;
+        height: 20px;
+        stroke-width: 2px;
     }
 }
 
-// Explorer refinements
+// 6. Polished Explorer
 .explorer {
-    h2 {
-        font-size: 0.75rem !important;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-        color: var(--gray) !important;
-        font-weight: 600 !important;
-        margin-bottom: 0.5rem !important;
+    margin-top: 1rem;
+
+    // Folder titles
+    button#explorer-content {
+        h2 {
+            font-size: 0.8rem !important;
+            text-transform: uppercase;
+            letter-spacing: 0.1em !important;
+            color: var(--gray) !important;
+            font-weight: 700 !important;
+            opacity: 0.6;
+        }
+    }
+
+    // Active/Hover states
+    & .folder-container {
+
+        div>a:hover,
+        div>button:hover {
+            color: var(--secondary) !important;
+            background: rgba(var(--secondary-rgb), 0.05);
+            border-radius: 6px;
+            padding-left: 4px; // Sutble nudge
+        }
     }
 }
 
-.explorer-content {
-    & ul li>a {
-        font-size: 0.9rem;
-        padding: 0.25rem 0;
-    }
-
-    .folder-container div>a,
-    .folder-container div>button span {
-        font-size: 0.9rem !important;
-        font-weight: 500 !important;
-    }
-}
-
-// Subtle page styling
-.page>#quartz-body .center>article {
-    h1 {
-        font-weight: 700;
-        letter-spacing: -0.02em;
-    }
-}
-
-// Cleaner breadcrumbs
+// 7. Refined Breadcrumbs
 .breadcrumb-container {
-    opacity: 0.7;
-    font-size: 0.85rem;
+    font-family: var(--codeFont);
+    font-size: 0.8rem;
+    opacity: 0.5;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+// 8. Callout & Code Block Polish
+.callout {
+    border-radius: 12px !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+pre {
+    border-radius: 12px !important;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+// Dark Mode Specifics (Luminous Night)
+:root[saved-theme="dark"] {
+    .sidebar {
+        background: rgba(20, 20, 25, 0.7); // Darker glass
+        border-right: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .profile-card__name {
+        // Brighter gradient for night
+        background: linear-gradient(135deg, #fff 0%, var(--secondary) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
 }

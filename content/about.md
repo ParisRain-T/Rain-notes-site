@@ -52,7 +52,7 @@ publish: true
 
 ## 找我
 
-- **Email**：2026482602th@gmail.com
+- **Email**：`parisraint@gmail.com`
 - **GitHub**：[github.com/ParisRain-T](https://github.com/ParisRain-T)
 
 ---

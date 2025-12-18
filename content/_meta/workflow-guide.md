@@ -189,7 +189,7 @@ content/
     - **结构**: 每个项目主要用文件夹管理 (如 
         
         ```
-        edgegarden/
+        smart-car/
         ```
         
         )。

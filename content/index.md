@@ -41,6 +41,6 @@ publish: true
 ## 联系我
 
 - Email：`parisraint@gmail.com`
-- [GitHub](https://github.com/ParisRain-T)
+- **GitHub**：[github.com/ParisRain-T](https://github.com/ParisRain-T)
 
 如果你在某篇文章里发现错误或有更好的做法，欢迎告诉我。

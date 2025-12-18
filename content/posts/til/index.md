@@ -2,16 +2,15 @@
 title: TIL
 publish: true
 ---
-
-# TIL (Today I Learned)
-
 每天学到的小知识、踩过的坑、解决的问题。短小精悍，保持更新频率。
 
 > 这里的内容来自我的 Daily Notes 精选，记录那些值得分享的「啊哈时刻」。
 
 ## 最近更新
 
-*等待第一篇 TIL...*
+- [[posts/til/2025-12-18|TIL: 大学一年半感悟]]
+- [[posts/til/2025-12-17|TIL - 寝室网络终于调教好了]]
+- [[posts/til/2025-12-16|TIL - 终于搞定 Obsidian + Quartz 工作流！]]
 
 ## 为什么写 TIL
 
@@ -21,6 +20,6 @@ publish: true
 
 ## 写法约定
 
-- 标题：`YYYY-MM-DD-关键词.md`
+- 文件名：`YYYY-MM-DD.md`（可选加 `-keyword`，但不要为了“看起来高级”硬加）
 - 篇幅：3-5 分钟阅读
 - 结构：问题 → 发现 → 结论

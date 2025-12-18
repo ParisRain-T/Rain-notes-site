@@ -55,7 +55,7 @@ stage: budding
 > IoT 领域最主流的通信协议
 
 **阅读内容：**
-- [[notes/iot/index|IoT 笔记]] 中关于 MQTT 的部分
+- [[notes/iot/mqtt-basics|MQTT 协议入门]]
 
 **核心概念：**
 - Broker / Publisher / Subscriber
@@ -68,13 +68,16 @@ stage: budding
 
 > 把前面的知识串起来
 
+如果你暂时还没有现成的 IoT 项目，可以先用「非 IoT 但结构类似」的案例练习“端到端闭环”的读法：
+
 **推荐查看：**
-- [[projects/edgegarden/index|EdgeGarden 项目]]
-- [[projects/edgegarden/architecture|EdgeGarden 架构]]
+- [[posts/articles/校园网自动登录|校园网自动登录：抓包 → 脚本 → 部署 → 验证]]
+- [[projects/takeout-miniprogram/architecture|外卖小程序：端到端架构示例]]（参考分层与边界）
 
 **关注点：**
-- 数据从传感器到云平台的完整路径
-- 每一层用了什么技术
+- 输入/输出是什么（数据/控制）
+- 每一层的职责边界
+- 出问题时靠什么定位（日志/指标/回归）
 
 ---
 

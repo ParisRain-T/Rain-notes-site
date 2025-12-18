@@ -42,5 +42,3 @@ publish: true
 - **根因** + **修复** + **回归检查**
 
 ---
-
-> Obsidian 模板：`_meta/templates/post-template.md`

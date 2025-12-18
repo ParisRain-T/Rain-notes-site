@@ -30,7 +30,9 @@ publish: true
 
 ## 笔记索引
 
-*等待第一篇 IoT 笔记...*
+- ⭐ 从这里开始：[[paths/iot-beginner|IoT 入门路径]]
+- MQTT：[[notes/iot/mqtt-basics|MQTT 协议入门]]
+- ESP32：[[notes/iot/esp32-setup|ESP32 开发环境搭建]]
 
 <!-- 示例链接格式：
 - [[notes/iot/mqtt-basics|MQTT 协议入门]]

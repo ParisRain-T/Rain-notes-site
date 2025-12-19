@@ -1,6 +1,6 @@
 ---
 title: 关于我
-publish: true
+draft: false
 ---
 
 # 关于我

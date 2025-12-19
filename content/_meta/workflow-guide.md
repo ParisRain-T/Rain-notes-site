@@ -1,6 +1,6 @@
 ---
 title: "Rain's Garden 维护手册"
-publish: false
+draft: true
 ---
 
 # 📘 数字花园维护手册
@@ -18,7 +18,7 @@ publish: false
 | **`posts/`** | **文章/博客** | 完整、线性、时间敏感 | 教程、复盘、观点、年终总结 |
 | **`notes/`** | **原子笔记** | 互联、网状、不断生长 | 概念定义、读书笔记、技术原理 |
 | **`projects/`** | **项目作品** | 展示性、视觉化 | 个人项目、黑客松作品、实验 |
-| **`til/`** | **TIL** | 短小、碎片、快 | 报错解决、命令备忘、冷知识 |
+| **`posts/til/`** | **TIL** | 短小、碎片、快 | 报错解决、命令备忘、冷知识 |
 
 ### 1.1 `notes/` 内部结构
 - `iot`: 物联网协议 (MQTT, CoAP), 架构
@@ -28,23 +28,54 @@ publish: false
 
 ## 2. 写作规范 (Frontmatter)
 
-每篇文章必须包含头部元数据 (YAML Frontmatter)。
+每篇内容建议包含头部元数据 (YAML Frontmatter)，不同类型略有差异。
 
-### 通用必填项
+### 通用必填项（所有页面）
 ```yaml
 ---
 title: "清晰的标题"
-date: 2024-01-01      # 排序依据
-tags:                 # 用于索引和关联
-  - 标签1
-  - 标签2
 draft: false          # true 则不发布
 ---
 ```
 
+### Posts（`posts/articles/` 与 `posts/til/`）必填项
+```yaml
+date: 2024-01-01      # 排序依据
+tags:
+  - 标签1
+  - 标签2
+```
+
+### Notes / Projects（推荐项）
+- **`tags`**: 用于聚合与检索（建议至少 1 个）
+- **`date`**: 可选；不写也会使用 git/文件时间
+
+### Index / 导航页（可选项）
+- **`description`**: 简短说明，用于列表预览
+
 ### 特殊项
 - **`description`**: (Posts 推荐) 100字以内的摘要，用于 SEO 和列表预览。
 - **`aliases`**: (Notes 推荐) 别名，方便反向链接，如 `aliases: [MQTT协议, Message Queuing Telemetry Transport]`。
+
+### 模板索引
+
+在 Obsidian 模板中直接调用以下文件：
+
+- `content/_meta/templates/article-template.md`：长文教程/专题文章
+- `content/_meta/templates/post-template.md`：短文观点/随笔
+- `content/_meta/templates/til-template.md`：TIL 碎片记录
+- `content/_meta/templates/note-template.md`：原子笔记/概念卡片
+- `content/_meta/templates/project-template.md`：项目总览页
+- `content/_meta/templates/project-architecture-template.md`：项目架构说明
+- `content/_meta/templates/project-how-to-run-template.md`：项目运行指南
+- `content/_meta/templates/project-decisions-template.md`：技术决策（ADR）
+- `content/_meta/templates/project-devlog-template.md`：开发日志
+- `content/_meta/templates/project-changelog-template.md`：更新日志
+- `content/_meta/templates/debug-diary-template.md`：故障排查记录
+- `content/_meta/templates/reading-notes-template.md`：读书笔记
+- `content/_meta/templates/project-postmortem-template.md`：项目复盘
+- `content/_meta/templates/path-template.md`：学习路径
+- `content/_meta/templates/section-index-template.md`：板块索引页
 
 ## 3. 组件速查 (Cheatsheet)
 
@@ -150,6 +181,9 @@ content/
         ```
         
         )，适合写教程、观点阐述、年终总结。
+    - **子目录**:
+        - `posts/articles/`：成体系长文
+        - `posts/til/`：TIL 碎片记录
 - **
     
     ```
@@ -181,6 +215,15 @@ content/
 - **
     
     ```
+    collections/
+    ```
+    
+     (收藏与解析)**:
+    - **作用**: 收集资料并写下自己的理解与应用点。
+    - **特点**: 轻量、可复用、带个人观点。
+- **
+    
+    ```
     projects/
     ```
     
@@ -194,16 +237,6 @@ content/
         
         )。
     - **内容**: 项目介绍、技术栈、截图、GitHub 链接。这是你展示实战能力的地方。
-- **
-    
-    ```
-    til/
-    ```
-    
-     (Today I Learned)**:
-    - **作用**: 碎片化知识记录。
-    - **特点**: 每天学到的一个小技巧、一个命令、一段代码。比 Note 更轻量，比 Post 更随意。
-
 ### 3. 系统与资源 (System & Assets)
 
 - **
@@ -275,7 +308,7 @@ content/
 - 想记**零碎心得** -> 去 
     
     ```
-    til
+    posts/til
     ```
     
 

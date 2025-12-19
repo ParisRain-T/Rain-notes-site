@@ -1,10 +1,21 @@
 ---
-title: Projects
-publish: true
+title: 项目
+draft: false
 ---
 
+# 项目
 
 这里汇总我做过的项目。每个项目都包含完整的文档体系，方便面试官和读者深入了解。
+
+## 项目总览
+
+| 项目 | 状态 | 亮点 | 演示/仓库 |
+|------|------|------|-----------|
+| [[projects/smart-car/index|智能小车]] | 研究中 | 嵌入式控制闭环 + 传感器融合 | [Repo](https://github.com/ParisRain-T/smart-car) |
+| [[projects/desktop-arm/index|桌面机械臂]] | 研究中 | 多关节控制 + 示教路线 | 待补充 |
+| [[projects/takeout-miniprogram/index|外卖小程序]] | 原型完成 | 端到端业务闭环 | [Repo](https://github.com/ParisRain-T/takeout-miniprogram) |
+
+> 主线项目：智能小车（IoT/边缘端方向）。
 
 ## 项目列表
 

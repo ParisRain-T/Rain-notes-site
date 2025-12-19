@@ -1,6 +1,10 @@
 ---
 title: ESP32 开发环境搭建
-publish: true
+draft: false
+tags:
+  - iot
+  - esp32
+  - embedded
 ---
 
 # ESP32 开发环境搭建
@@ -23,4 +27,3 @@ publish: true
 - 串口芯片驱动（CH340/CP2102）与端口权限
 - 供电不足导致“莫名其妙重启”
 - Wi‑Fi 密码/2.4G 与 5G 频段
-

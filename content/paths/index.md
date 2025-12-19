@@ -1,6 +1,6 @@
 ---
 title: 学习路径
-publish: true
+draft: false
 ---
 
 # 学习路径

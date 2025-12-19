@@ -1,18 +1,25 @@
-# Quartz v4
+# Rain Notes Site
 
-> “[One] who works with the door open gets all kinds of interruptions, but [they] also occasionally gets clues as to what the world is and what might be important.” — Richard Hamming
+个人数字花园（Quartz 4）。内容在 `content/`，官方文档在 `docs/`。
 
-Quartz is a set of tools that helps you publish your [digital garden](https://jzhao.xyz/posts/networked-thought) and notes as a website for free.
-Quartz v4 features a from-the-ground rewrite focusing on end-user extensibility and ease-of-use.
+## 本地开发
 
-🔗 Read the documentation and get started: https://quartz.jzhao.xyz/
+```bash
+npm install
+npx quartz build --serve
+```
 
-[Join the Discord Community](https://discord.gg/cRFFHYye7t)
+访问 `http://localhost:8080` 预览。
 
-## Sponsors
+## 目录结构
 
-<p align="center">
-  <a href="https://github.com/sponsors/jackyzha0">
-    <img src="https://cdn.jsdelivr.net/gh/jackyzha0/jackyzha0/sponsorkit/sponsors.svg" />
-  </a>
-</p>
+- `content/`：站点内容
+- `docs/`：Quartz 官方文档
+- `quartz.config.ts`：站点配置
+- `quartz.layout.ts`：页面布局
+
+## 构建发布
+
+```bash
+npx quartz build
+```

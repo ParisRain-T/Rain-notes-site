@@ -1,9 +1,9 @@
 ---
-title: Notes
-publish: true
+title: 学习笔记
+draft: false
 ---
 
-# Notes
+# 学习笔记
 
 这里放更碎、更快的笔记：概念卡片、踩坑记录、读书摘录、随手想法。它们不一定完整，但会通过链接慢慢长成体系。
 

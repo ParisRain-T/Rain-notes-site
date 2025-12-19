@@ -1,6 +1,10 @@
 ---
 title: MQTT 协议入门
-publish: true
+draft: false
+tags:
+  - iot
+  - mqtt
+  - protocol
 ---
 
 # MQTT 协议入门
@@ -52,4 +56,3 @@ MQTT 是一个轻量的发布/订阅（Pub/Sub）消息协议，适合带宽受�
 你只需要能说清楚这两件事：
 - 设备 publish：把数据发到 `devices/<id>/telemetry`
 - 服务 subscribe：订阅 `devices/+/telemetry` 收集数据入库/展示
-

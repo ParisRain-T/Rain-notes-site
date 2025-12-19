@@ -1,6 +1,6 @@
 ---
-title: Articles
-publish: true
+title: 长文
+draft: false
 description: 成体系长文索引：教程、复盘与专题整理
 ---
 这里放成体系的长文：深度教程、项目复盘、专题整理、读书笔记等。
@@ -9,9 +9,9 @@ description: 成体系长文索引：教程、复盘与专题整理
 
 ## 现有文章
 
-- [[posts/articles/工作流|我的知识管理工作流：Obsidian + Quartz + NotebookLM 完整搭建指南]]
-- [[posts/articles/网络环境搭建|宿舍网络环境终极配置指南：GL-MT3000 + OpenClash 全攻略]]
-- [[posts/articles/校园网自动登录|🔥 GL-MT3000 校园网自动登录秘籍]]
+- [[posts/articles/工作流|我的知识管理工作流：Obsidian + Quartz + NotebookLM 完整搭建指南]] — 从零搭建「私有笔记 → 公开博客 → AI 知识库」
+- [[posts/articles/网络环境搭建|宿舍网络环境终极配置指南：GL-MT3000 + OpenClash 全攻略]] — 软路由实战 + DNS 防泄漏
+- [[posts/articles/校园网自动登录|🔥 GL-MT3000 校园网自动登录秘籍]] — 抓包分析 + 脚本自动登录
 
 ## 文章分类
 
@@ -19,19 +19,21 @@ description: 成体系长文索引：教程、复盘与专题整理
 
 *系统性的入门/进阶教程*
 
-（待添加...）
+- [[posts/articles/工作流|我的知识管理工作流：Obsidian + Quartz + NotebookLM 完整搭建指南]]
+- [[posts/articles/网络环境搭建|宿舍网络环境终极配置指南：GL-MT3000 + OpenClash 全攻略]]
+- [[posts/articles/校园网自动登录|🔥 GL-MT3000 校园网自动登录秘籍]]
 
 ### 🔍 复盘总结
 
 *项目做完后的深度回顾*
 
-（待添加...）
+当前暂无内容，后续会补上对应文章链接。
 
 ### 💡 专题整理
 
 *某个主题的系统梳理*
 
-（待添加...）
+当前暂无内容，后续会补上对应文章链接。
 
 ---
 

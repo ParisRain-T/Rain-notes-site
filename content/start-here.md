@@ -1,6 +1,6 @@
 ---
 title: 从这里开始
-publish: true
+draft: false
 ---
 
 
@@ -20,15 +20,21 @@ publish: true
 - **方向**：IoT 端到云开发（嵌入式 + 后端 + 云平台）
 - **节点**：大三春招/暑期实习
 
-## 🔥 先看这个项目
+## 🔥 先看这个 IoT 项目
 
+### 智能小车（主线）
 
-### 外卖小程序
+> 嵌入式控制 + 传感器 + 上位机，目标是跑通“指令 → 电机 → 反馈”的闭环。
 
-> 多商户外卖平台，涵盖支付、订单、云开发
+- [[projects/smart-car/index|项目总览]]
+- [[projects/smart-car/architecture|系统架构]]
+- [[projects/smart-car/devlog|开发日志]]
+
+### 其他项目（非 IoT）
+
+> 多商户外卖平台小程序原型，涵盖支付、订单、云开发
 
 - [[projects/takeout-miniprogram/index|项目总览]]
-- 技术栈：微信小程序 + 云开发 + 微信支付
 
 ## 📚 我最近在学什么
 
@@ -44,6 +50,12 @@ publish: true
 如果你想跟着我的思路走一遍，可以看看这些阅读路径：
 
 - [[paths/index|所有路径]]
+
+## 🧩 收藏与解析
+
+我会把收集的资料和自己的理解放在这里：
+
+- [[collections/index|收藏与解析]]
 
 ## 📬 联系我
 

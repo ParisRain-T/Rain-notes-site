@@ -1,21 +1,21 @@
 ---
-title: Posts
-publish: true
+title: 文章
+draft: false
 ---
 
-# Posts
+# 文章
 
-这里汇集所有对外输出的内容：短小精悍的 TIL、深度长文、调试日记等。
+这里汇集所有对外输出的内容：短小精悍的今日所学、深度长文、调试日记等。
 
 ## 内容分类
 
-### 📝 TIL (Today I Learned)
+### 📝 今日所学（TIL）
 
 每天学到的小知识、踩过的坑、解决的问题。
 
-→ [[posts/til/index|查看所有 TIL]]
+→ [[posts/til/index|查看所有今日所学]]
 
-### 📚 Articles
+### 📚 长文
 
 相对成体系的长文：教程、复盘、专题整理等。
 

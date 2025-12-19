@@ -1,5 +1,6 @@
 import { PageLayout, SharedLayout } from "./quartz/cfg"
 import * as Component from "./quartz/components"
+import { QuartzComponentProps } from "./quartz/components/types"
 
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
@@ -18,16 +19,31 @@ const profileCard = Component.DesktopOnly(
     avatarUrl: "static/avatar.jpeg",
     links: [
       { href: "https://github.com/ParisRain-T", label: "GitHub", icon: "github" },
-      { href: "mailto:2026482602th@gmail.com", label: "Email", icon: "mail" },
+      { href: "mailto:parisraint@gmail.com", label: "Email", icon: "mail" },
     ],
   }),
 )
 
+const isHome = (page: QuartzComponentProps) => page.fileData.slug === "index"
+const homeGraph = Component.Graph({
+  localGraph: {
+    depth: 1,
+    showTags: false,
+  },
+})
+const standardGraph = Component.Graph()
+
 // components for pages that display a single page (e.g. a single note)
 export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
-    Component.InteractiveEffects(),
-    Component.LuminousHero(),
+    Component.ConditionalRender({
+      component: Component.InteractiveEffects(),
+      condition: isHome,
+    }),
+    Component.ConditionalRender({
+      component: Component.LuminousHero(),
+      condition: isHome,
+    }),
     Component.ConditionalRender({
       component: Component.Breadcrumbs(),
       condition: (page) => page.fileData.slug !== "index",
@@ -60,7 +76,7 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Explorer({
       filterFn: (node) => !["_meta", "tags", "assets"].includes(node.slugSegment),
       sortFn: (a, b) => {
-        const order = ["projects", "notes", "posts", "til"]
+        const order = ["start-here", "projects", "posts", "notes", "collections", "paths", "about", "now"]
         const aIdx = order.indexOf(a.slugSegment)
         const bIdx = order.indexOf(b.slugSegment)
         if (aIdx !== -1 && bIdx !== -1) return aIdx - bIdx
@@ -74,7 +90,14 @@ export const defaultContentPageLayout: PageLayout = {
     }),
   ],
   right: [
-    Component.Graph(),
+    Component.ConditionalRender({
+      component: homeGraph,
+      condition: isHome,
+    }),
+    Component.ConditionalRender({
+      component: standardGraph,
+      condition: (page) => page.fileData.slug !== "index",
+    }),
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
   ],
@@ -100,7 +123,7 @@ export const defaultListPageLayout: PageLayout = {
     Component.Explorer({
       filterFn: (node) => !["_meta", "tags", "assets"].includes(node.slugSegment),
       sortFn: (a, b) => {
-        const order = ["projects", "notes", "posts", "til"]
+        const order = ["start-here", "projects", "posts", "notes", "collections", "paths", "about", "now"]
         const aIdx = order.indexOf(a.slugSegment)
         const bIdx = order.indexOf(b.slugSegment)
         if (aIdx !== -1 && bIdx !== -1) return aIdx - bIdx

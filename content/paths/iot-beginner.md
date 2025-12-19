@@ -1,12 +1,10 @@
 ---
 title: IoT 入门路径
-publish: true
+draft: false
 stage: budding
 ---
 
 # IoT 入门：从零到跑通一个传感器项目
-
-> 预计阅读时间：30 分钟（不含动手实践）
 
 ## 这条路径适合谁
 

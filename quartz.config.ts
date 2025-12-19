@@ -12,9 +12,7 @@ const config: QuartzConfig = {
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
-    analytics: {
-      provider: "plausible",
-    },
+    analytics: null,
     locale: "zh-CN",
     // NOTE: Used for sitemap/RSS and must be domain only (no https://, no trailing slash)
     baseUrl: "notes.20041019.xyz",
@@ -30,12 +28,14 @@ const config: QuartzConfig = {
     ],
     defaultDateType: "modified",
     theme: {
-      fontOrigin: "googleFonts",
-      cdnCaching: true,
+      fontOrigin: "local",
+      cdnCaching: false,
       typography: {
-        header: "Outfit",
-        body: "Inter",
-        code: "JetBrains Mono",
+        header:
+          "Avenir Next, SF Pro Display, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Noto Sans CJK SC, sans-serif",
+        body:
+          "SF Pro Text, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Noto Sans CJK SC, sans-serif",
+        code: "JetBrains Mono, SFMono-Regular, Menlo, Consolas, monospace",
       },
       colors: {
         lightMode: {
@@ -99,9 +99,7 @@ const config: QuartzConfig = {
       Plugin.Static(),
       Plugin.Favicon(),
       Plugin.NotFoundPage(),
-      // NOTE: Custom OG image generation may fetch fonts over the network.
-      // Re-enable if you want per-page OG images.
-      Plugin.CustomOgImages(),
+      // Custom OG images disabled to avoid extra build cost and font fetching.
     ],
   },
 }

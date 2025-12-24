@@ -1,5 +1,5 @@
 ---
-title: IoT 学习路径
+title: 端到云（IoT平台）作为主工程主线 + 机器人/边缘作为作品集升级方向
 draft: false
 stage: budding
 ---

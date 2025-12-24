@@ -59,7 +59,7 @@ draft: false
 
 ## 📬 联系我
 
-- **Email**：`parisraint@gmail.com`
+- **Email**：`contact@20041019.xyz`
 - **GitHub**：[github.com/ParisRain-T](https://github.com/ParisRain-T)
 
 ---

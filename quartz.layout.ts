@@ -19,7 +19,7 @@ const profileCard = Component.DesktopOnly(
     avatarUrl: "static/avatar.jpeg",
     links: [
       { href: "https://github.com/ParisRain-T", label: "GitHub", icon: "github" },
-      { href: "mailto:parisraint@gmail.com", label: "Email", icon: "mail" },
+      { href: "mailto:contact@20041019.xyz", label: "Email", icon: "mail" },
     ],
   }),
 )

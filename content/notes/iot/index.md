@@ -30,7 +30,7 @@ draft: false
 
 ## 笔记索引
 
-- ⭐ 从这里开始：[[iot-学习路径|IoT 入门路径]]
+- ⭐ 从这里开始：[[学习路径|IoT 入门路径]]
 - MQTT：[[notes/iot/mqtt-basics|MQTT 协议入门]]
 - ESP32：[[notes/iot/esp32-setup|ESP32 开发环境搭建]]
 

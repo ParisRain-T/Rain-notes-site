@@ -11,13 +11,25 @@ draft: false
 
 | 项目 | 状态 | 亮点 | 演示/仓库 |
 |------|------|------|-----------|
+| [[projects/p0-edge-sense/index|P0 端到云闭环（Edge Sense）]] | 进行中 | 端→边→云闭环、可复现部署、命令/ACK | 待补充 |
 | [[projects/smart-car/index|智能小车]] | 研究中 | 嵌入式控制闭环 + 传感器融合 | [Repo](https://github.com/ParisRain-T/smart-car) |
 | [[projects/desktop-arm/index|桌面机械臂]] | 研究中 | 多关节控制 + 示教路线 | 待补充 |
 | [[projects/takeout-miniprogram/index|外卖小程序]] | 原型完成 | 端到端业务闭环 | [Repo](https://github.com/ParisRain-T/takeout-miniprogram) |
 
-> 主线项目：智能小车（IoT/边缘端方向）。
+> 主线工程路线：P0（端到云闭环底座）→ P1（智能小车/机器人升级）。
 
 ## 项目列表
+
+### 🌧️ P0 端到云闭环（Edge Sense）
+
+> P0 底座项目：把协议/可靠性/可观测/可复现部署一次打穿
+
+- [[projects/p0-edge-sense/index|项目总览]]
+- [[projects/p0-edge-sense/architecture|系统架构]]
+- [[projects/p0-edge-sense/how-to-run|运行指南]]
+- [[projects/p0-edge-sense/decisions|技术决策]]
+- [[projects/p0-edge-sense/changelog|更新日志]]
+- [[projects/p0-edge-sense/devlog|开发日志]]
 
 ### 🍜 外卖小程序
 
